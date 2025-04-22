@@ -6,12 +6,13 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 15:46:58 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/22 20:23:18 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/22 20:55:16 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "libftprintf.h"
+#include <stdio.h>
 
 int	ft_printf(char const *format, ...)
 {
@@ -19,6 +20,7 @@ int	ft_printf(char const *format, ...)
 	va_list ap;
         va_start(ap, format);
 	int	n;
+	void	*ptr;
 
 	i = 0;
 	while (format[i])
@@ -42,6 +44,12 @@ int	ft_printf(char const *format, ...)
 				ft_putnbr(n);
 				i += 2;
 			}
+			if (format[i + 1] == 'p')
+			{
+				ptr = va_arg(ap, void *);
+				ft_putptr(ptr);
+				i += 2;
+			}
 		}
 		else
 		{
@@ -51,13 +59,4 @@ int	ft_printf(char const *format, ...)
 	}
 	va_end(ap);
 	return (0);
-}
-
-int	main(void)
-{
-	char	c = 'a';
-	ft_printf("prueba %%c = %c", c);
-	write(1, "\n", 1);
-	ft_printf("prueba %%d = %d", c);
-	write(1, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 19:01:06 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/22 19:57:07 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/22 21:00:56 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ void	ft_putptr(void *ptr)
 	nbr = (unsigned long)ptr;
 	hex = "0123456789abcdef";
 	write(1, "0x", 2);
-	ft_putnbr_base(nbr, hex);
-	
+	ft_putnbr_base(nbr, hex);	
 }
 
 void	ft_putuint(unsigned int n)
