@@ -6,7 +6,7 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 19:01:06 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/22 21:00:56 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:54:58 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ void	ft_putuint(unsigned int n)
 
 	nbr = n;
 	if (nbr > 9)
-		ft_putnbr(n / 10);
+		ft_putuint(n / 10);
 	nbr = (n % 10) + 48;
 	write (1, &nbr, 1);
 }
 
-void	puthex_lower(unsigned int n)
+void	ft_puthex_lower(unsigned int n)
 {
 	char   *hex;
 
@@ -43,7 +43,7 @@ void	puthex_lower(unsigned int n)
 	ft_putnbr_base(n, hex);
 }
 
-void    puthex_upper(unsigned int n)
+void    ft_puthex_upper(unsigned int n)
 {
 	char	*hex;
 

@@ -6,7 +6,7 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 18:46:21 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/22 20:59:56 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:56:00 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_printf(const char *format, ...);
 void	ft_putptr(void *ptr);
 void	ft_putnbr(int n);
 void	ft_putuint(unsigned int n);
-void	puthex_lower(unsigned int n);
-void    puthex_upper(unsigned int n);
+void	ft_puthex_lower(unsigned int n);
+void    ft_puthex_upper(unsigned int n);
 
 # endif
