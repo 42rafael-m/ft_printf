@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 18:46:21 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/24 13:33:33 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/24 16:22:22 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
