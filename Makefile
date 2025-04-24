@@ -1,7 +1,7 @@
 NAME = libftprintf.a
 LIBFT_DIR = libft
 LIBFT_A = $(LIBFT_DIR)/libft.a
-SRC = ft_printf.c ft_printf_utils.c ft_printf_utils2.c
+SRC = ft_printf.c ft_printf_utils.c ft_printf_utils2.c ft_printf_utils3.c
 OBJ = $(SRC:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_DIR) -I.

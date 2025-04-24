@@ -6,7 +6,7 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 19:01:06 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/23 16:52:48 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/23 17:30:18 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ int	ft_check_format(char c, va_list ap)
 
 int	ft_putptr(void *ptr)
 {
-	char    *hex;
-	unsigned long	nbr;
-	int	len;
+	char				*hex;
+	unsigned long		nbr;
+	int					len;
 
 	if (!ptr)
 	{
@@ -70,8 +70,8 @@ int	ft_putuint(unsigned int n)
 
 int	ft_puthex_lower(unsigned int n)
 {
-	char   *hex;
-	int	len;
+	char	*hex;
+	int		len;
 
 	hex = "0123456789abcdef";
 	len = ft_nbr_base_len(n, ft_strlen(hex));
@@ -82,7 +82,7 @@ int	ft_puthex_lower(unsigned int n)
 int	ft_puthex_upper(unsigned int n)
 {
 	char	*hex;
-	int	len;
+	int		len;
 
 	hex = "0123456789ABCDEF";
 	len = ft_nbr_base_len(n, ft_strlen(hex));

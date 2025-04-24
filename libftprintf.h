@@ -6,15 +6,15 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 18:46:21 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/23 16:49:12 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/23 17:26:56 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
 
-#include <stdarg.h>
-#include <unistd.h>
+# include <stdarg.h>
+# include <unistd.h>
 
 int	ft_printf(const char *format, ...);
 int	ft_putptr(void *ptr);
@@ -31,4 +31,4 @@ int	ft_putformat_hexlower(va_list ap);
 int	ft_putformat_hexupper(va_list ap);
 int	ft_putformat_uint(va_list ap);
 
-# endif
+#endif
