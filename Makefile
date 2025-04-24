@@ -1,29 +1,34 @@
 NAME = libftprintf.a
 LIBFT_DIR = libft
 LIBFT_A = $(LIBFT_DIR)/libft.a
+LIBFT_H_SRC = libft/libft.h
+LIBFT_H_DST = libft.h
 SRC = ft_printf.c ft_printf_utils.c ft_printf_utils2.c ft_printf_utils3.c
 OBJ = $(SRC:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_DIR) -I.
 AR = ar rcs
 
-all: $(NAME)
+all: copy_libft_h $(NAME)
 
 $(LIBFT_A):
 	make -C $(LIBFT_DIR)
 
 $(NAME): $(LIBFT_A) $(OBJ)
 	cp $(LIBFT_A) $(NAME)
+	cp libft.h ..
 	$(AR) $(NAME) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-
+copy_libft_h:
+	cp $(LIBFT_H_SRC) $(LIBFT_H_DST)
 clean:
 	rm -f $(OBJ)
 	make clean -C $(LIBFT_DIR)
 fclean: clean
 	rm -f $(NAME)
+	rm libft.h
 	make fclean -C $(LIBFT_DIR)
 
 re: fclean all
