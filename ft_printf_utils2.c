@@ -6,7 +6,7 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:32:51 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/23 17:32:42 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/24 15:00:02 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,7 @@ int	ft_putformat_str(va_list ap)
 
 	str = va_arg(ap, char *);
 	ft_putstr_fd(str, 1);
-	return (ft_strlen(str));
+	if (str)
+		return (ft_strlen(str));
+	return (1);
 }

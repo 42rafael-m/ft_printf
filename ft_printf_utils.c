@@ -6,7 +6,7 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 19:01:06 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/23 17:30:18 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/24 15:00:31 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,14 @@ int	ft_putptr(void *ptr)
 
 int	ft_putuint(unsigned int n)
 {
-	int	len;
+	char	c;
+	int		len;
 
 	len = ft_longlen(n);
-	ft_putnbr(n);
+	if (n > 9)
+		ft_putnbr(n / 10);
+	c = (n % 10) + 48;
+	write (1, &c, 1);
 	return (len);
 }
 
