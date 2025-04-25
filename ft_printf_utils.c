@@ -6,13 +6,12 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 19:01:06 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/24 15:00:31 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/25 17:05:30 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #include "libft.h"
-#include <limits.h>
 
 int	ft_check_format(char c, va_list ap)
 {
@@ -32,6 +31,8 @@ int	ft_check_format(char c, va_list ap)
 		return (ft_putformat_hexupper(ap));
 	if (c == 'u')
 		return (ft_putformat_uint(ap));
+	if (c == 'i')
+		return (ft_putformat_int(ap));
 	else
 	{
 		ft_putchar(c);

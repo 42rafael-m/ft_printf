@@ -6,13 +6,12 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 15:46:58 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/24 15:00:15 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/25 16:44:13 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "libftprintf.h"
-#include <stdio.h>
 
 int	ft_printf(char const *format, ...)
 {

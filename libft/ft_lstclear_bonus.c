@@ -6,13 +6,11 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:41:52 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/19 20:52:40 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/25 16:48:17 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdio.h>
 /*
 Elimina y libera el nodo ’lst’ dado y todos los consecutivos de ese nodo,
 utilizando la función ’del’ y free(3). Al final, el puntero a la lista debe ser

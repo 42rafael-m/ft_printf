@@ -6,12 +6,11 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 15:05:29 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/23 17:40:15 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/25 16:49:45 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 /* Muestra un número en el terminal en una base determinada. Se proporciona
  * este número en forma de un int y la base en forma de un string. La base
  * contiene todos los símbolos que se pueden utilizar para mostrar el número.

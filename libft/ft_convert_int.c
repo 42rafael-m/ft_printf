@@ -6,13 +6,11 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:15:13 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/23 18:12:17 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/25 16:50:02 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdio.h>
 
 /* Convierte un int pasado como parámetro a un string resultado de la conversión
  * del int a la base pasada como string como segundo parámetro */
