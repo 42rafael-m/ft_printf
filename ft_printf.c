@@ -28,12 +28,13 @@ int	ft_printf(char const *format, ...)
 		{
 			len += ft_check_format(format[i + 1], ap);
 			i += 2;
-			continue ;
 		}
 		else
+		{
 			ft_putchar(format[i]);
-		i++;
-		len++;
+			i++;
+			len++;
+		}
 	}
 	va_end(ap);
 	return (len);

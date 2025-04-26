@@ -22,13 +22,14 @@ int	ft_putuint(unsigned int n);
 int	ft_puthex_lower(unsigned int n);
 int	ft_puthex_upper(unsigned int n);
 int	ft_check_format(char c, va_list ap);
-int	ft_putformat_per(void);
-int	ft_putformat_char(va_list ap);
-int	ft_putformat_int(va_list ap);
-int	ft_putformat_ptr(va_list ap);
-int	ft_putformat_str(va_list ap);
-int	ft_putformat_hexlower(va_list ap);
-int	ft_putformat_hexupper(va_list ap);
-int	ft_putformat_uint(va_list ap);
+int	ft_format_per(void);
+int	ft_format_char(va_list ap);
+int	ft_format_int(va_list ap);
+int	ft_format_ptr(va_list ap);
+int	ft_format_str(va_list ap);
+int	ft_format_hexlower(va_list ap);
+int	ft_format_hexupper(va_list ap);
+int	ft_format_uint(va_list ap);
+int	ft_ptr_errors(void *ptr);
 
 #endif

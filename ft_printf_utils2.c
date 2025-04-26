@@ -14,13 +14,13 @@
 #include "libft.h"
 #include "libftprintf.h"
 
-int	ft_putformat_per(void)
+int	ft_format_per(void)
 {
 	ft_putchar('%');
 	return (1);
 }
 
-int	ft_putformat_char(va_list ap)
+int	ft_format_char(va_list ap)
 {
 	int	n;
 
@@ -29,7 +29,7 @@ int	ft_putformat_char(va_list ap)
 	return (1);
 }
 
-int	ft_putformat_int(va_list ap)
+int	ft_format_int(va_list ap)
 {
 	int	n;
 
@@ -38,7 +38,7 @@ int	ft_putformat_int(va_list ap)
 	return (ft_longlen(n));
 }
 
-int	ft_putformat_ptr(va_list ap)
+int	ft_format_ptr(va_list ap)
 {
 	void	*ptr;
 
@@ -46,11 +46,16 @@ int	ft_putformat_ptr(va_list ap)
 	return (ft_putptr(ptr));
 }
 
-int	ft_putformat_str(va_list ap)
+int	ft_format_str(va_list ap)
 {
 	char	*str;
 
 	str = va_arg(ap, char *);
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	ft_putstr_fd(str, 1);
 	if (str)
 		return (ft_strlen(str));
