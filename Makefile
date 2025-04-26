@@ -7,14 +7,13 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_DIR) -I.
 AR = ar rcs
 
-all: copy_libft_h $(NAME)
+all: $(NAME)
 
 $(LIBFT_A):
 	make -C $(LIBFT_DIR)
 
 $(NAME): $(LIBFT_A) $(OBJ)
 	cp $(LIBFT_A) $(NAME)
-	cp libft.h ..
 	$(AR) $(NAME) $(OBJ)
 
 %.o: %.c
