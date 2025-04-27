@@ -38,27 +38,29 @@ int	ft_format_uint(va_list ap)
 	return (ft_putuint(u));
 }
 
-int	ft_ptr_errors(void *ptr)
+int	ft_unbr_base_len(unsigned long long nbr, size_t base_len)
 {
-	if ((long long)ptr == -LONG_MAX)
+	int	len;
+
+	len = 0;
+	if (nbr == 0)
+		return (1);
+	while (nbr != 0)
 	{
-		write(1, "0x8000000000000001", 19);
-		return (18);
+		nbr /= base_len;
+		len++;
 	}
-	if ((unsigned long)ptr == ULONG_MAX)
-	{
-		write(1, "0xffffffffffffffff", 19);
-		return (18);
-	}
-	if ((long)ptr == LONG_MIN)
-	{
-		write(1, "0x8000000000000000", 19);
-		return (18);
-	}
-	if ((unsigned long)ptr == LONG_MAX)
-	{
-		write(1, "0x7fffffffffffffff", 19);
-		return (18);
-	}
-	return (0);
+	return (len);
+}
+
+void	ft_putunbr_base(unsigned long long nbr, char *base)
+{
+	size_t	base_len;
+
+	if (!base)
+		return ;
+	base_len = ft_strlen(base);
+	if (nbr >= base_len)
+		ft_putunbr_base(nbr / base_len, base);
+	write(1, &base[nbr % base_len], 1);
 }

@@ -45,19 +45,18 @@ int	ft_putptr(void *ptr)
 {
 	char				*hex;
 	int					len;
+	unsigned long long	address;
 
 	if (!ptr)
 	{
-		write(1, "(nil)", 6);
+		write(1, "(nil)", 5);
 		return (5);
 	}
-	len = ft_ptr_errors(ptr);
-	if (len)
-		return (len);
+	address = (unsigned long long)ptr;
 	hex = "0123456789abcdef";
-	len = ft_nbr_base_len((unsigned long)ptr, ft_strlen(hex)) + 2;
+	len = ft_unbr_base_len(address, 16) + 2;
 	write(1, "0x", 2);
-	ft_putnbr_base((unsigned long)ptr, hex);
+	ft_putunbr_base(address, hex);
 	return (len);
 }
 
