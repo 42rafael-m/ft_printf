@@ -6,7 +6,7 @@
 /*   By: rafael-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 19:01:06 by rafael-m          #+#    #+#             */
-/*   Updated: 2025/04/25 17:05:30 by rafael-m         ###   ########.fr       */
+/*   Updated: 2025/04/28 20:17:36 by rafael-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_check_format(char c, va_list ap)
 		ft_putchar(c);
 		return (1);
 	}
-	return (0);
+	return (-1);
 }
 
 int	ft_putptr(void *ptr)
