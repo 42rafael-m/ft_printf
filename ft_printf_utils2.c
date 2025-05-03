@@ -12,7 +12,7 @@
 
 #include <stdarg.h>
 #include "libft.h"
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_format_per(void)
 {
