@@ -38,7 +38,6 @@ int	ft_check_format(char c, va_list ap)
 		ft_putchar(c);
 		return (1);
 	}
-	return (-1);
 }
 
 int	ft_putptr(void *ptr)

@@ -15,24 +15,24 @@
 
 int	ft_printf(char const *format, ...)
 {
-	int		i;
 	va_list	ap;
 	int		len;
 
 	len = 0;
-	i = 0;
+	if (!format)
+		return (-1);
 	va_start(ap, format);
-	while (format[i])
+	while (*format)
 	{
-		if (format[i] == '%' && format[i + 1])
+		if (*format == '%' && *(format + 1))
 		{
-			len += ft_check_format(format[i + 1], ap);
-			i += 2;
+			len += ft_check_format(*(format + 1), ap);
+			format += 2;
 		}
 		else
 		{
-			ft_putchar(format[i]);
-			i++;
+			ft_putchar(*format);
+			format++;
 			len++;
 		}
 	}
